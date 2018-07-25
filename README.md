@@ -46,3 +46,23 @@ SELECT TO_DATE('2014/07/22', 'yyyy/mm/dd') FROM dual;
 SELECT TO_CHAR(sysdate, 'YYYY') FROM dual;
 ```
 [Oracle / PLSQL TO_DATE](http://oracleplsql.ru/to_date-function.html)
+
+____
+# TIME_ZONE
+
+```sql
+ALTER SESSION SET TIME_ZONE = {}
+```
+{}:
+- **local**
+- **'+05:00'**
+- **'Asia/Yekaterinburg'**
+   ____
+# FOR UPDATE
+```sql
+SELECT ... FOR UPDATE {}
+```
+
+{}:
+- **wait 5** -- wait 5 sec, then fail
+- **of(_columns_)** -- lock _columns_ only
