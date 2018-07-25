@@ -113,3 +113,7 @@ GRANT UPDATE {} ON tableRRR TO rrr;
 - **_columns_** ... allow update _columns_ only
 
 SELECT is NOT restricted (use VIEW to restrict)
+
+```sql
+REVOKE ALL ON tableUUU FROM uuu;
+```
