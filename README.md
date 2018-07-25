@@ -106,7 +106,8 @@ ____
 ```sql
 CREATE ROLE rrr;
 GRANT rrr TO uuu;
-GRANT UPDATE{} ON table TO rrr;
+GRANT SELECT, INSERT, UPDATE, DELETE ON tableUUU TO uuu;
+GRANT UPDATE {} ON tableRRR TO rrr;
 ```
 {}:
 - **_columns_** ... allow update _columns_ only
