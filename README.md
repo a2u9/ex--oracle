@@ -1,9 +1,8 @@
 # ex--oracle
 Oracle Tips
 
-# ROWNUM
 ____
-### TOP 10
+## ROWNUM (TOP 10)
 
 ```sql
 SELECT * FROM
@@ -15,8 +14,8 @@ WHERE ROWNUM < 11;
 ```sql
 SELECT * FROM emp WHERE ROWNUM > 10;
 ```
-
-### ROWNUMBER()
+____
+## ROWNUMBER()
 
 ```sql
 SELECT * FROM (SELECT a.*, ROW_NUMBER () OVER (ORDER BY a.object_name) rn
