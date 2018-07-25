@@ -91,3 +91,24 @@ ____
 ```sql
 INSERT INTO table(id, ...) VALUES(sequence_name.nextval, ...);
 ```
+
+____
+# CREATE USER
+```sql
+CREATE USER uuu IDENTIFIED BY password;
+GRANT CREATE SESSION, ... [CREATE TABLE, CREATE SEQUENCE] TO uuu;
+ALTER USER uuu QUOTA UNLIMITED ON users QUOTA 100M ON test_ts QUOTA 500K ON data_ts;
+```
+
+
+____
+# GRANT
+```sql
+CREATE ROLE rrr;
+GRANT rrr TO uuu;
+GRANT UPDATE{} ON table TO rrr;
+```
+{}:
+- **_columns_** ... allow update _columns_ only
+
+SELECT is NOT restricted (use VIEW to restrict)
